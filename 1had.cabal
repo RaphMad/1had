@@ -1,0 +1,31 @@
+name:                1had
+version:             0.1.0.0
+synopsis:            Contains solutions for examples by https://github.com/geophf/1HaskellADay/
+description:         Please see README.md
+homepage:            https://github.com/RaphMad/1had#readme
+license:             MIT
+license-file:        LICENSE
+author:              Raphael Mader
+maintainer:          RaphMad@users.noreply.github.com
+copyright:           (c) 2016 Raphael Mader
+category:            TODO
+build-type:          Simple
+cabal-version:       >=1.22
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Lib
+  build-depends:       base >= 4.9 && < 5
+  default-language:    Haskell2010
+
+executable 1had-exe
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -Wall -fno-warn-name-shadowing
+  build-depends:       base >= 4.9 && < 5,
+                     , 1had
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/RaphMad/1had
